@@ -1,0 +1,13 @@
+const count1 - 0;
+count1 = count1 + 1;
+ This will show a error. Assignment to a constand variable. 
+
+in Usestate: 
+ const count2 = [1, 2]
+  if i try to change arr, it will throw error. 
+
+ but if change arr value. it can. 
+ count2[0] = 4;
+ count2[1] = 6;
+
+IT is mutable. 

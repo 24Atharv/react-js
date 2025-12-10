@@ -1,0 +1,50 @@
+React Jargons: 
+  
+  State: State is a object that represent the dynamic things in your app. thing that change.
+  e.g: The value of counter
+
+  Components: How a DOM element should render, given a state. It is a re-usable, dynamic, HTML snippet that changes given the state.
+
+  Jo dynamic part hai vo ekside likho , and how does the application look, usko dusri side likho.
+
+  1. REAL DOM (Browser DOM)
+
+     This is the actual UI you see on the screen — the real HTML elements in the browser.
+
+  2. VIRTUAL DOM (React’s copy of the DOM)
+
+    The Virtual DOM is a JavaScript object (in memory) that represents what the UI should look like.
+
+    It’s like a blueprint or a shadow copy of the real DOM, stored in JavaScript.
+
+    Example (conceptual):
+
+    {
+  type: "h1",
+  children: "Hello"
+    }
+
+   This is not real HTML — it’s just an object.
+
+
+
+
+
+   A state change triggers a re-render"
+
+    In React (or similar frameworks):
+
+    You have state → values stored inside a component.
+
+    When you update the state using something like setState or setCount(count + 1), React notices that something changed that affects what the UI should look like.
+
+   ➡️ So React schedules a re-render of that component.
+
+    Think of it as React saying:
+
+    “The data changed, so the UI must be recalculated.”
+
+   A re-render is the step where React decides how the real DOM should change,
+   and after this process, it updates only the necessary parts of the actual DOM.
+
+
