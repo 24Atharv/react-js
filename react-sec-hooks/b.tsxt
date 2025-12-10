@@ -1,0 +1,19 @@
+useState:   useState is a Hook that lets you add state to functional components.
+            It returns an array with the current state and a function to update it.
+
+const [isVisible, setIsVisible] = useState(false);
+   when the value of state variable changes, then the component 
+   which are using this state var. get re-render. 
+
+const ToggleMessage = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    return (
+        <div>
+            <button onClick={() => setIsVisible(!isVisible)}>
+                Toggle Message
+            </button>
+            {isVisible && <p>This message is conditionally rendered!</p>}
+        </div>
+    );
+};

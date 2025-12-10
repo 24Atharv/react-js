@@ -1,0 +1,42 @@
+# Conditional Rendering
+
+You can render different components or elements based on certain conditions.
+
+It simply means:   Show something ONLY if a condition is true.
+
+Just like:
+
+“If I pass the exam → I will celebrate.”
+
+“If it's raining → take an umbrella.”
+
+React does the same with UI.
+
+our component:
+
+const [isVisible, setIsVisible] = useState(false);
+
+This means:   isVisible starts as false
+        So message is hidden initially
+
+        This is just JavaScript:
+
+true && "hello"  ➜ "hello"
+false && "hello" ➜ false (nothing)
+
+
+Example:  
+import React, { useState } from 'react';
+
+const ToggleMessage = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    return (
+        <div>
+            <button onClick={() => setIsVisible(!isVisible)}>
+                Toggle Message
+            </button>
+            {isVisible && <p>This message is conditionally rendered!</p>}
+        </div>
+    );
+};

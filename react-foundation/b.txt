@@ -11,3 +11,10 @@ in Usestate:
  count2[1] = 6;
 
 IT is mutable. 
+
+
+# Components
+
+   In React, components are the building blocks of the user interface. 
+   They allow you to split the UI into independent, reusable pieces that can be thought of as custom, 
+   self-contained HTML elements.
