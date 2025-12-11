@@ -1,0 +1,40 @@
+## What is "Render" in React?
+✔ Render = React calling your component function for the first time
+
+React executes your function to know what UI to show.
+
+Example:
+
+function App() {
+  return <h1>Hello</h1>;
+}
+
+During render, React literally runs your function:
+
+App()
+→ returns <h1>Hello</h1>
+
+React uses this to build the Virtual DOM and then draws it on the real DOM (browser).
+
+📌 Render happens:  When the component is loaded for the first time.
+
+
+## What is "Re-render" in React?
+✔ Re-render = React calling your component function again
+
+This happens when React thinks the UI needs to change.
+
+React re-renders when:
+
+A state changes (useState)
+
+A prop changes
+
+The parent re-renders
+
+Context values change
+
+So re-render means:
+
+React runs your function again to get the updated UI.
+

@@ -12,3 +12,33 @@ Side effects:
   </div>
 
 
+❗ Why can't we run side effects directly inside the component body?
+
+Because the component body runs on every re-render.
+
+Example:
+
+function App() {
+  console.log("Component rendered");
+  fetch("/api/data");  // ❌ side effect in render
+
+  return <h1>Hello</h1>;
+}
+
+What happens?
+
+Component renders → fetch runs
+
+State updates → re-render → fetch runs again
+
+Another update → fetch runs AGAIN
+
+Infinite unnecessary fetches → performance crash
+
+So if you put side effects inside the component function:
+
+The effect will run every time the component re-renders.
+
+React can't control or schedule the effect.
+
+You get duplicate API calls, event listeners stacking, memory leaks, etc.
